@@ -1,0 +1,6 @@
+string message
+---
+int8 COMPLETED=0
+int8 ERROR=1
+#response field
+int8 ret
