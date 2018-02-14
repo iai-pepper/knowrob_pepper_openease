@@ -49,19 +49,10 @@ PREDICATE(pepper_point_at,5) {
 
 // pepper_say(description)
 PREDICATE(pepper_say,1) {
-    ROS_ERROR("%s\n", "Starting1");
-
   knowrob_pepper_openease_msgs::PepperSay srv;
-    ROS_ERROR("%s\n", "Starting2");
-
   srv.request.message = (char*)PL_A1;
-    ROS_ERROR("%s\n", "Starting3");
 
-
-  //ros::service::waitForService("pepper_say");
-    ROS_ERROR("%s\n", "Starting4");
-
-
+  ros::service::waitForService("pepper_say");
   if (!clientSay.call(srv))
   {
     return FALSE;
