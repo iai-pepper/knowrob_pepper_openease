@@ -16,8 +16,3 @@ add_dependencies(pepper_openease_client knowrob_pepper_openease_msgs_gencpp)
 
 install(DIRECTORY prolog/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/prolog)
-
-install(PROGRAMS
-  scripts/pepper_oe_server.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)

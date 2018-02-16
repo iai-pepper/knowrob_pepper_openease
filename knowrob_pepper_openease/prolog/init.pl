@@ -24,18 +24,9 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  @author Lorenz Mösenlechner
-  @author Moritz Tenorth
-  @author Daniel Beßler
+  @author Sascha Jongebloed
   @license BSD
 */
-
-:- register_ros_package(knowrob_openease).
-:- register_ros_package(knowrob_common).
-:- register_ros_package(knowrob_mongo).
-:- register_ros_package(comp_temporal).
-:- register_ros_package(knowrob_vis).
-:- register_ros_package(knowrob_cram).
 
 :- use_module(library('process')).
 :- use_module(library('knowrob/pepper_openease')).
