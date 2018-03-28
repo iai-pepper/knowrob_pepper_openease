@@ -45,6 +45,8 @@ def pepper_point_at(req):
     if description and description.strip():
         tts.say(description)
 
+    posture_service.goToPosture("StandInit", 0.5)
+
     return PepperPointAtResponse(PepperPointAtResponse.COMPLETED)
 
 # This method gets the String from our SRV File and uses the Text to Speech from Pepper
@@ -80,8 +82,11 @@ if __name__ == "__main__":
         sys.exit(1)
     global tts
     global trackerService
+    global posture_service
     # Get the service ALTracker.
     trackerService = session.service("ALTracker")
     # Get the text to speech.
     tts = session.service("ALTextToSpeech")
+    posture_service = session.service("ALRobotPosture")
+
     pepper_oe_server()
